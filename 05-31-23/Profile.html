@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My profile</title>
+<style>
+    
+    h2{
+        text-align: center;
+    }
+    .img{
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+    }
+</style>
+    </head>
+
+    <body>
+
+        <h2>My Profile</h2>
+
+        <script>
+            var profile= {
+            FirstName: "Chandu",
+            LastName: "Reddy",
+            DOB:new Date("12/27/1997"),
+            height:5.9,
+            Gender:"Male",
+            University:"University of Central Missouri",
+            Hobbies:[{sportActivity:["Cricket", "Hand Ball", "Running"]},{awards:"silvermedal"}]         
+          
+        };
+        console.log(profile.Hobbies[0].sportActivity[2]);
+
+        </script>
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" class="img">
+
+    </body>
+</html>
