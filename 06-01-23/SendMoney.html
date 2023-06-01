@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>
+        SendMoney
+      </title>
+    </head>
+    <body>
+     <script>
+        let amount=100;
+        let sendAmount;
+        var environment="dev";
+
+        switch(environment){
+
+            case "dev":
+                sendAmount=amount+(0.1*amount);
+            case "test":
+                sendAmount=amount+(0.2*amount);
+            case "stage":
+                sendAmount=amount+(0.3*amount);
+            case "prod":
+                sendAmount=amount+(0.4*amount);
+        }
+        console.log(sendAmount);
+        
+
+     </script>
+        
+
+    </body>
+</html>
