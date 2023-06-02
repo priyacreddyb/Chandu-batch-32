@@ -48,7 +48,17 @@
         }
         
         console.log(sendAmount);
-        
+
+
+        //using terinary operator
+
+        environment="dev"?sendAmount=amount+(0.1*amount)
+        :environment="test"?sendAmount=amount+(0.2*amount)
+        :environment="stage"?sendAmount=amount+(0.3*amount)
+        :environment="prod"?sendAmount=amount+(0.4*amount)
+        :sendAmount=amount;
+        console.log(sendAmount);
+
 
      </script>
         
