@@ -9,19 +9,44 @@
      <script>
         let amount=100;
         let sendAmount;
-        var environment="dev";
-
+        let environment="dev";
+        
+        //using switch
         switch(environment){
 
             case "dev":
                 sendAmount=amount+(0.1*amount);
+                break;
             case "test":
                 sendAmount=amount+(0.2*amount);
+                break;
             case "stage":
                 sendAmount=amount+(0.3*amount);
+                break;
             case "prod":
                 sendAmount=amount+(0.4*amount);
+                break;
+            default:
+                sendAmount=amount;
+                
         }
+    console.log(sendAmount);
+      
+    //     using if-else
+     
+
+
+        if(environment="dev"){
+            sendAmount=amount+(0.1*amount);
+        } else if(environment="test"){
+            sendAmount=amount+(0.2*amount);
+
+        } else if(environment="stage"){
+            sendAmount=amount+(0.3*amount);
+        } else if(environment="prod"){
+            sendAmount=amount+(0.4*amount);
+        }
+        
         console.log(sendAmount);
         
 
