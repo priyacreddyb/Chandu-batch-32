@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Hobbies</title>
+    </head>
+    <body>
+        <h3>My Hobbies</h3>
+        <script>
+            let Hobbies=["Reading","Handball","Watching_Movies","carrom"];
+
+            function printHobbies(){
+                console.log("My Hobbies are:"+Hobbies);
+            }
+
+            printHobbies();
+
+            function addHobbie(hobby){
+              Hobbies.push(hobby);
+             }
+
+            function deleteHobbie(hobby){
+              for(let i=0;i<Hobbies.length;i++){
+                if(i==Hobbies.indexOf(hobby)){
+                    Hobbies.splice(i,1);
+                }
+
+              }
+
+                
+                
+            }
+            console.log("List before adding:" +Hobbies);
+
+
+            addHobbie("cricket");
+            console.log("List after adding:" +Hobbies);
+
+            console.log("List before deleting:" +Hobbies);
+
+
+
+            
+            deleteHobbie("Handball");
+            console.log("List after deleting:" +Hobbies);
+
+
+
+            
+                
+            
+        </script>
+    </body>
+
+</html>
