@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Profile Information
+        </title>
+        <body>
+          <div>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" ></input>
+            <br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" ></input>
+            <br>
+            <label for="dob">DOB</label>
+            <input type="date" id="dob" >
+            <br>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" >
+            <br>
+            <label for="Pno">Phone Number:</label>
+            <input type="tel" id="Pno" maxlength="10" >
+            <br>
+            <button onclick="displayAllValues()">SUBMIT</button>
+            <!-- <div id="displayingValues"></div> -->
+
+
+          </div>
+          <div id="displayingValues"></div>
+
+            <script>
+                function displayAllValues(){
+                 var firstName= document.getElementById("fname").value;
+                 var lastName= document.getElementById("lname").value;
+                 var dateOfBirth= document.getElementById("dob").value;
+                 var emailId= document.getElementById("mail").value;
+                 var phoneNumber= document.getElementById("Pno").value;
+
+                 document.getElementById('displayingValues').innerHTML=
+                 "First Name is :"+firstName 
+                 +"Last Name is :"+lastName 
+                 +"Date of Birth is:"+dateOfBirth 
+                 +"E-mail is is:"+emailId  
+                 +"Phone Number is :"+phoneNumber;  
+                //  document.getElementById("displayingValues").innerHTML="Last Name is:"+lastName;
+                //  document.getElementById("displayingValues").innerHTML="Date of birth is:"+dateOfBirth;
+                //  document.getElementById("displayingValues").innerHTML="E-mail id is:"+emailId;
+                //  document.getElementById("displayingValues").innerHTML="Phone Number is:"+phoneNumber;
+
+
+
+                 
+
+
+
+                }
+                    
+                   
+
+            </script>
+        </body>
+    </head>
+</html>
