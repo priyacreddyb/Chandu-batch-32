@@ -22,11 +22,13 @@
             <input type="tel" id="Pno" maxlength="10" >
             <br>
             <button onclick="displayAllValues()">SUBMIT</button>
-            <!-- <div id="displayingValues"></div> -->
-
-
-          </div>
-          <div id="displayingValues"></div>
+            <p id="p1"></p><br>
+            <p id="p2"></p><br>
+            <p id="p3"></p><br>
+            <p id="p4"></p><br>
+            <p id="p5"></p>
+            </div>
+          <p id="displayingValues"></p>
 
             <script>
                 function displayAllValues(){
@@ -36,16 +38,11 @@
                  var emailId= document.getElementById("mail").value;
                  var phoneNumber= document.getElementById("Pno").value;
 
-                 document.getElementById('displayingValues').innerHTML=
-                 "First Name is :"+firstName 
-                 +"Last Name is :"+lastName 
-                 +"Date of Birth is:"+dateOfBirth 
-                 +"E-mail is is:"+emailId  
-                 +"Phone Number is :"+phoneNumber;  
-                //  document.getElementById("displayingValues").innerHTML="Last Name is:"+lastName;
-                //  document.getElementById("displayingValues").innerHTML="Date of birth is:"+dateOfBirth;
-                //  document.getElementById("displayingValues").innerHTML="E-mail id is:"+emailId;
-                //  document.getElementById("displayingValues").innerHTML="Phone Number is:"+phoneNumber;
+                 document.getElementById('p1').innerHTML="First Name is :"+firstName 
+                 document.getElementById("p2").innerHTML="Last Name is:"+lastName;
+                 document.getElementById("p3").innerHTML="Date of birth is:"+dateOfBirth;
+                 document.getElementById("p4").innerHTML="E-mail id is:"+emailId;
+                 document.getElementById("p5").innerHTML="Phone Number is:"+phoneNumber;
 
 
 
