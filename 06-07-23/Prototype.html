@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ArrayScope(Array){
+            this.Array=Array;
+        }
+        ArrayScope.prototype.SortedSecond=function(){
+            this.Array.sort();
+            //console.log(this.Array);
+            return this.Array[1]
+        }
+        const myArray=new ArrayScope([12,344,5565,1,23]);
+        console.log(myArray.SortedSecond());
+
+
+     </script>
+    
+</body>
+</html>
