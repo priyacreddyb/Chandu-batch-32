@@ -9,75 +9,97 @@
 <body>
     <form>
         <label for="fname">FirstName: </label>
-        <input type="text" id="fname"><br>
+        <input type="text" id="fname" required/><br>
         <label for="lname">LastName: </label>
-        <input type="text" id="lname"><br>
-        <!-- <label for="gender">Gender: </label>
-        <input type="radio" id="gender" name="gender"></input>
+        <input type="text" id="lname" required/><br>
+        <label >Gender: </label>
+        <input type="radio" id="male" name="gender"></input>
         <label for ="male">Male </label>
-        <input type="radio" id="gender" name="gender"></input>
-        <label for ="female">Female </label><br> -->
+        <input type="radio" id="female" name="gender"></input>
+        <label for ="female">Female </label><br>
         <label for="email">Email: </label>
-        <input typle="mail" id="email"><br>
+        <input type="mail" id="email" required/><br>
         <label for="Pno">Phone Number </label>
         <input type="tel" id="Pno"><br>
-        <label for="Hobby">Hobbies: </label>
-        <input type="checkbox" id="cricket" name="cricket" value="cricket">cricket</input>
-        <input type="checkbox" id="Handball" name="Handball"  value="Handball">Handball</input>
-        <input type="checkbox" id="FootBall" name="FootBall"  value="FootBall">FootBall</input>
-        <input type="checkbox" id="BasketBall" name="BasketBall"  value="BasketBall">BasketBall</input>
-        <input type="checkbox" id="Softball" name="Softball"  value="Softball">Softball</input><br>
         <label for="dob" >DOB</label> 
         <input type="date" id="dob"><br>
-        <input type="button" value="Submit" onclick="displayAllValues()"></input> 
+        <label >Hobbies: </label>
+        <label for="cricket">Cricket</label>
+        <input type="checkbox" id="cricket" ></input>
+        <label for="Handball">Handball</label>
+        <input type="checkbox" id="Handball" ></input>
+        <label for="FootBall">Football</label>
+        <input type="checkbox" id="FootBall" ></input>
+        <label for="BasketBall">BasketBall</label>
+        <input type="checkbox" id="BasketBall" ></input>
+        <label for="SoftBall" >Softball</label>
+        <input type="checkbox" id="SoftBall"></input><br>
+        <input type="button" value="Submit" onclick="displayAllValues()"></input>  
     </form>
          
-        <p id="a" ></p><br>
-        <p id="b" ></p><br>
-        <p id="c" ></p><br>
-        <p id="d" ></p><br>
-        <p id="e" ></p><br>
-        <p id="f" ></p><br>
-        <p id="g" ></p>
+        <p id="a"></p><br>
+        <p id="b"></p><br>
+        <p id="c"></p><br>
+        <p id="d"></p><br>
+        <p id="p"></p><br>
+
+        <p id="e"></p><br>
+        <p id="f"></p><br>
+        <p id="g"></p><p id="h"></p><p id="i"></p><p id="j"></p><p id="k"></p>
         
     
     <script>
         
         function displayAllValues(){
 
+        document.getElementById('fname').value;   
         const a1=document.getElementById('fname').value;
         const a2=document.getElementById('lname').value;
         const a4=document.getElementById('email').value;
         const a5=document.getElementById('Pno').value; 
         const a7=document.getElementById('dob').value;
-        var newHobbies=[];
-        var inputs = document.querySelectorAll("input[type='checkbox']");
-        for(var i = 0; i < inputs.length; i++) {
-            if(inputs[i].checked = true){
-                console.log(inputs[i]);
-                newHobbies.push(inputs[i].value);
-            }  
-            
-        }
+        document.getElementById("a").innerHTML="First Name is:"+a1;
+        document.getElementById("b").innerHTML="Last Name is:"+a2;
+        if((document.getElementById("male").checked)){
+        document.getElementById("c").innerHTML="Gender is:"+"Male";
+           
+       }
+       if((document.getElementById("female").checked)){
+        document.getElementById("c").innerHTML="Gender is:"+"Female";
+    }
+        document.getElementById("d").innerHTML="Email is:"+a4;
+        document.getElementById("p").innerHTML="Phone number is:"+a5;
+        document.getElementById("e").innerHTML="Dob is:"+a7;
+        document.getElementById("f").innerHTML="Hobbies are:";
+        if(document.getElementById("cricket").checked){
+        document.getElementById("g").innerHTML="Cricket";
+    }else{
+        document.getElementById("g").innerHTML=null;
+    }
+       if(document.getElementById("Handball").checked){
+        document.getElementById("h").innerHTML="Handball";
+    }else{
+        document.getElementById("h").innerHTML=null;
+    }
+       if(document.getElementById("FootBall").checked){
+        document.getElementById("i").innerHTML="FootBall";
+    }else{
+        document.getElementById("i").innerHTML=null;
+    }
+       if(document.getElementById("BasketBall").checked){
+        document.getElementById("j").innerHTML="BasketBall";
+    }else{
+        document.getElementById("j").innerHTML=null;
+    }
+       if(document.getElementById("SoftBall").checked){
+        document.getElementById("k").innerHTML="SoftBall";
+    }else{
+        document.getElementById("k").innerHTML=null;
+    }
 
+   
+} 
 
-
-        document.getElementById("a").innerHTML="First Name is"+a1;
-        document.getElementById("b").innerHTML="Last Name is"+a2;
-        document.getElementById("d").innerHTML="Email is"+a4;
-        document.getElementById("c").innerHTML="phobe is"+a5;
-        document.getElementById("e").innerHTML="dob is"+a7;
-        document.getElementById("f").innerHTML="Hobbies are:"+newHobbies;
-
-
-      
-
-
-
-        } 
-
-        
-       
     </script>
     
 </body>
